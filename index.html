@@ -365,7 +365,7 @@ document.getElementById('interest').addEventListener('submit',function(e){
 </div>
 <script>
 (function(){
-  var CHAT = { endpoint: "/api/chat", live: false }; // live:false = no AI, every question goes to the team form
+  var CHAT = { endpoint: "/api/chat", live: true }; // live:false = no AI, every question goes to the team form
   var fab=document.getElementById('chatFab'), panel=document.getElementById('chatPanel'), log=document.getElementById('chatLog'),
       form=document.getElementById('chatForm'), text=document.getElementById('chatText'), send=document.getElementById('chatSend'),
       team=document.getElementById('teamForm'), history=[], busy=false, greeted=false;
@@ -393,7 +393,7 @@ document.getElementById('interest').addEventListener('submit',function(e){
     busy=true; send.disabled=true; var w=add('bot wait','Thinking…');
     fetch(CHAT.endpoint,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({messages:history.slice(-12)})})
       .then(function(r){ if(!r.ok) throw new Error(r.status); return r.json(); })
-      .then(function(d){ w.remove(); add('bot',d.reply); history.push({role:'assistant',content:d.reply}); if(d.handoff) teamBtn(); })
+      .then(function(d){ w.remove(); d.reply=String(d.reply||'').replace(/\*\*|__/g,''); add('bot',d.reply); history.push({role:'assistant',content:d.reply}); if(d.handoff) teamBtn(); })
       .catch(function(){ w.remove(); add('bot',"Sorry, I can't answer right now. Leave your question and Adrian's team will email you."); openTeam(); })
       .then(function(){ busy=false; send.disabled=false; });
   });
