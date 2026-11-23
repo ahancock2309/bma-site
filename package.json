@@ -1,0 +1,8 @@
+{
+  "name": "bma-site",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@anthropic-ai/sdk": "latest"
+  }
+}
