@@ -365,7 +365,7 @@ document.getElementById('interest').addEventListener('submit',function(e){
 </div>
 <script>
 (function(){
-  var CHAT = { endpoint: "/api/chat", live: true }; // live:false = no AI, every question goes to the team form
+  var CHAT = { endpoint: "/api/chat", live: false }; // live:false = no AI, every question goes to the team form
   var fab=document.getElementById('chatFab'), panel=document.getElementById('chatPanel'), log=document.getElementById('chatLog'),
       form=document.getElementById('chatForm'), text=document.getElementById('chatText'), send=document.getElementById('chatSend'),
       team=document.getElementById('teamForm'), history=[], busy=false, greeted=false;
