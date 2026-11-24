@@ -36,7 +36,7 @@ export default `## What it is
 - Businesses that prefer to pay by bank transfer can ask for an invoice at hello@businessmentorshipacademy.com.
 - Card details are handled by Stripe; we never see them.
 
-## Terms (summary of the booking terms page, /terms.html)
+## Terms (summary of the booking terms page: https://businessmentorshipacademy.com/terms.html)
 - Cancel more than 14 days before the event: full refund.
 - Within 14 days: move the seat to a later Academy, or send a colleague instead at no charge.
 - If we change or cancel the dates: move to the new dates or get a full refund.
@@ -46,6 +46,7 @@ export default `## What it is
 - There is a free online goal-setting session; people can ask about it in the register-interest form.
 - People who want to talk first can tick the box in the form for a short call with Adrian.
 - Contact: hello@businessmentorshipacademy.com.
+- Links: when pointing to a page, always give the full address, e.g. the booking terms are at https://businessmentorshipacademy.com/terms.html. Never give a bare path like /terms.html.
 - "I've done Tony Robbins or similar": good, you have the energy. This is the operating detail: the systems, numbers and structure that make it stick on Monday morning.
 
 ## Never say or promise

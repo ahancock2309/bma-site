@@ -369,7 +369,20 @@ document.getElementById('interest').addEventListener('submit',function(e){
   var fab=document.getElementById('chatFab'), panel=document.getElementById('chatPanel'), log=document.getElementById('chatLog'),
       form=document.getElementById('chatForm'), text=document.getElementById('chatText'), send=document.getElementById('chatSend'),
       team=document.getElementById('teamForm'), history=[], busy=false, greeted=false;
-  function add(cls, t){ var d=document.createElement('div'); d.className='msg '+cls; d.textContent=t; log.appendChild(d); log.scrollTop=log.scrollHeight; return d; }
+  function add(cls, t){
+    var d=document.createElement('div'); d.className='msg '+cls;
+    var re=/(https:\/\/(?:www\.)?businessmentorshipacademy\.com[^\s)<]*|\/terms\.html|hello@businessmentorshipacademy\.com)/g, last=0, m;
+    while((m=re.exec(t))){
+      d.appendChild(document.createTextNode(t.slice(last,m.index)));
+      var u=m[0].replace(/[.,;:]+$/,''), a=document.createElement('a');
+      a.href = u.indexOf('@')>0 ? 'mailto:'+u : (u.charAt(0)==='/' ? 'https://businessmentorshipacademy.com'+u : u);
+      if(u.indexOf('@')<0){ a.target='_blank'; a.rel='noopener'; }
+      a.textContent = u.charAt(0)==='/' ? 'booking terms' : u.replace('https://','');
+      d.appendChild(a); last=m.index+u.length;
+    }
+    d.appendChild(document.createTextNode(t.slice(last)));
+    log.appendChild(d); log.scrollTop=log.scrollHeight; return d;
+  }
   function teamBtn(){ var b=document.createElement('button'); b.type='button'; b.className='chat-team'; b.textContent='Ask Adrian’s team'; b.onclick=openTeam; log.appendChild(b); log.scrollTop=log.scrollHeight; }
   function openTeam(){
     var lastQ=''; for(var i=history.length-1;i>=0;i--){ if(history[i].role==='user'){ lastQ=history[i].content; break; } }
