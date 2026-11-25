@@ -2,7 +2,6 @@
 export default `## What it is
 - Business Mentorship Academy (BMA): a three-day, in-person academy for business operators who want to become business owners.
 - Tagline: "Stop running it. Start owning it." Descriptor: operator to owner.
-- The journey: the Academy is Base Camp, then The Ascent (monthly community and peer boards), and The Peak is where everyone is heading. Owners who want to go faster with one-to-one time with Adrian can join The Ascent VIP.
 - Business Mentorship Academy is a trading name of Peak 9 Ltd, registered in England and Wales. Led by Adrian Hancock.
 
 ## Who it is for
@@ -27,7 +26,7 @@ export default `## What it is
 - Vision comes last on purpose: build all the tools first, then set the vision once.
 - Attendees leave with: a completed strategic blueprint; an accountability chart; a weekly and quarterly meeting rhythm and first quarterly priorities; their marketing message, sales process and key numbers; a plan for AI in every seat; a clear personal and business vision; two free books (Traction by Gino Wickman and Building a StoryBrand by Donald Miller); a place in a community of owners.
 - It uses the ideas in Traction and Building a StoryBrand.
-- Format: in person, workshops with Adrian teaching and working the room, at tables of about five. Afterwards there is the option of joining The Ascent: monthly meetings and peer boards in Manchester.
+- Format: in person, workshops with Adrian teaching and working the room, at tables of about five. Afterwards there is the option of a monthly community and a peer board.
 
 ## Adrian Hancock
 - Has built and acquired businesses in technology and property, and stepped back from running them day to day.
@@ -63,5 +62,5 @@ export default `## What it is
 - Never call it EOS, EOS implementation or EOS-certified, and never say StoryBrand-certified. Say it uses the ideas in Traction and Building a StoryBrand.
 - No tax-saving, pension or inheritance-tax claims. Structure and wealth is awareness only.
 - Don't mention Adrian's other businesses by name; this is Peak 9.
-- No prices for The Ascent or The Ascent VIP until they appear on this sheet.
+- Don't name or describe any follow-on programme, and give no prices for one. If asked what happens after the three days, say there is the option of a monthly community and a peer board, and that Adrian will talk it through with attendees.
 `;
